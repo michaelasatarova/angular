@@ -1,0 +1,5 @@
+<button (click)="togglebtn()">Display details</button>
+<p  [ngClass]="{dnone: displayParagraph == false}" >Password : xyz</p>
+
+<br>
+<div *ngFor="let arrBtn of arrBtns; let i = index"  [ngStyle]="{backgroundColor: i>4 ? 'blue' :'' }">{{ arrBtn }} {{ i }}</div>

@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="changeIntput">
+<p>{{ changeIntput }}</p>
+
+<!-- <button (click)="clenUp()">{{ changeIntput ? "add sth" : ""}} </button> -->
+<button  [ngClass]="{online: changeIntput == ''}" (click)="clenUp()">{{ changeIntput ? "add sth" : ""}} </button>
+
+<p *ngIf="changeIntput ; else noServer"> Input was changed</p>
+<ng-template #noServer>
+    <p>Input was not changed</p>
+</ng-template>
+<p  [ngStyle]="{backgroundColor : getColor() }"> color</p>

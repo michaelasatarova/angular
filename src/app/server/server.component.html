@@ -1,1 +1,10 @@
-<div>Server component</div>
+<div class="btn btn-primary" (click)="onCreateServer()">Add server </div>
+<div>Server component {{ serverId }}</div>
+<div>{{serverCreationStatus}}</div>
+
+<form action="">
+    <label for=""> server name</label>
+    <input type="text" (input)="onUpdateServerName($event)">
+</form>
+<br>
+<p>{{ serverName }}</p>
